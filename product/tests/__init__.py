@@ -1,0 +1,3 @@
+from .test_models.product_model_test import test_create_product
+from .test_viewsets.test_product_viewset import TestProductViewSet
+from .test_viewsets.test_category_viewset import TestCategoryViewSet
