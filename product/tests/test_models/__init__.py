@@ -1,0 +1,1 @@
+from .product_model_test import test_create_product
