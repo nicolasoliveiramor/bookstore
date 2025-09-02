@@ -8,8 +8,6 @@ from rest_framework.permissions import IsAuthenticated
 
 
 class ProductViewSet(ModelViewSet):
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated]
     serializer_class = ProductSerializer
 
     def get_queryset(self):
