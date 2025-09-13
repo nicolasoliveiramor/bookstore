@@ -11,7 +11,7 @@ from product.models import Category
 
 class TestCategoryViewSet(APITestCase):
     client = APIClient()
-    
+
     def setUp(self):
         self.category = CategoryFactory(title="books")
 
