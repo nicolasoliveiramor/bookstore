@@ -4,6 +4,8 @@ jobs:
   qa:
     name: Quality check
     runs-on: ubuntu-22.04
+    env:
+      DJANGO_ALLOWED_HOSTS: "localhost 127.0.0.1 [::1]"
     steps:
       - uses: actions/checkout@v1
       - name: Set up Python
@@ -17,7 +19,6 @@ jobs:
           poetry install
         env:
           POETRY_VIRTUALENVS_CREATE: false
-          DJANGO_ALLOWED_HOSTS: "localhost 127.0.0.1 [::1]"
 
       - name: View poetry --help
         run: poetry --help
